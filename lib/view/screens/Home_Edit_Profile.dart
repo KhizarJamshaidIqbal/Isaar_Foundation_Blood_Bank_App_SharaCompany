@@ -1,25 +1,39 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, sort_child_properties_last, camel_case_types, file_names, prefer_adjacent_string_concatenation
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, camel_case_types, prefer_const_literals_to_create_immutables, prefer_adjacent_string_concatenation, sort_child_properties_last, non_constant_identifier_names, no_leading_underscores_for_local_identifiers, unused_element, file_names
 
 import 'package:flutter/material.dart';
 import 'package:issar_foundation_blood_bank_app/API/Down_Banner_Api.dart';
-import 'package:issar_foundation_blood_bank_app/view/Utils/Colors.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Home_Edit_Profile.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Looking_for_Blood.dart';
+import 'package:issar_foundation_blood_bank_app/view/Components/Customtextfield.dart';
 
-class Complte_Profile extends StatefulWidget {
-  const Complte_Profile({super.key});
+import 'Home.dart';
+import 'Looking_for_Blood.dart';
+
+class update_profile extends StatefulWidget {
+  const update_profile({super.key});
 
   @override
-  State<Complte_Profile> createState() => _Complte_ProfileState();
+  State<update_profile> createState() => _update_profileState();
 }
 
-class _Complte_ProfileState extends State<Complte_Profile> {
+class _update_profileState extends State<update_profile> {
   @override
   Widget build(BuildContext context) {
+    final TextEditingController _NameController = TextEditingController();
+    final TextEditingController _OccupationController = TextEditingController();
+    final TextEditingController _AddressController = TextEditingController();
+
+    @override
+    void dispose() {
+      super.dispose();
+      _NameController.dispose();
+      _OccupationController.dispose();
+      _AddressController.dispose();
+    }
+
     var scheight = MediaQuery.of(context).size.height;
     var scwidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         toolbarHeight: 100,
         elevation: 0,
@@ -29,9 +43,9 @@ class _Complte_ProfileState extends State<Complte_Profile> {
           style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w400,
-              color: globalColors.loghtColor),
+              color: Color(0xffF5F5F5)),
         ),
-        backgroundColor: globalColors.primaryColor,
+        backgroundColor: Color(0xffbf1e24),
       ),
       drawer: Drawer(),
       body: Stack(
@@ -40,10 +54,10 @@ class _Complte_ProfileState extends State<Complte_Profile> {
           Container(
             height: 20,
             width: double.infinity,
-            color: globalColors.primaryColor,
+            color: Color(0xffbf1e24),
           ),
           Container(
-            height: scheight * .86,
+            height: scheight * .89,
             width: scwidth,
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -59,16 +73,17 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                       child: Row(
                         children: [
                           Column(
-                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              SizedBox(
-                                height: 90,
-                                width: 90,
-                                child: CircleAvatar(
-                                  radius: 45,
-                                  backgroundColor: Colors.white,
-                                  backgroundImage:
-                                      AssetImage("Images/Logo2.png"),
+                              CircleAvatar(
+                                radius: 45,
+                                backgroundColor: Color(0xffBF3437),
+                                child: Text(
+                                  "B+",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xffFFFFFF)),
                                 ),
                               )
                             ],
@@ -78,7 +93,6 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
                               Text(
                                 "Salaam" + ",",
@@ -102,7 +116,7 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                       ),
                     ),
                     SizedBox(
-                      height: 40.0,
+                      height: 20.0,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 45.0, right: 34.0),
@@ -135,125 +149,55 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                                           BorderRadius.circular(30.0))),
                             ),
                           ),
-                          // ignore: prefer_const_constructors
                           SizedBox(
                             height: 25.0,
                           ),
                           Text(
-                            "Blood Group",
+                            "Update Profile",
                             style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400),
-                          ),
-                          Row(
-                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "A+",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                              Spacer(),
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "A-",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                              Spacer(),
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "AB+",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                              Spacer(),
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "AB-",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                            ],
+                                fontSize: 20, fontWeight: FontWeight.w700),
                           ),
                           SizedBox(
                             height: 12.0,
                           ),
-                          Row(
-                            // ignore: prefer_const_literals_to_create_immutables
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Color(0xffBF3437),
-                                radius: 30,
-                                child: Text(
-                                  "B+",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
+                          customtextfield(
+                              textAlign: TextAlign.start,
+                              prefixIcon: Icon(
+                                Icons.person_outline_sharp,
+                                color: Color(0xffC33235),
                               ),
-                              Spacer(),
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "B-",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                              Spacer(),
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "O+",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                              Spacer(),
-                              CircleAvatar(
-                                backgroundColor: Color(0xffF5F5F5),
-                                radius: 30,
-                                child: Text(
-                                  "O-",
-                                  style: TextStyle(
-                                      color: Color(0xffB5B5B5),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                            ],
-                          ),
+                              KeyboardType: TextInputType.text,
+                              controller: _NameController,
+                              hintText: "Name",
+                              labelText: "Name"),
                           SizedBox(
-                            height: 45.0,
+                            height: 15.0,
+                          ),
+                          customtextfield(
+                              textAlign: TextAlign.start,
+                              prefixIcon: Icon(
+                                Icons.person_outline_sharp,
+                                color: Color(0xffC33235),
+                              ),
+                              KeyboardType: TextInputType.text,
+                              controller: _OccupationController,
+                              hintText: "Occupation",
+                              labelText: "Occupation"),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          customtextfield(
+                              textAlign: TextAlign.start,
+                              prefixIcon: Icon(
+                                Icons.location_on,
+                                color: Color(0xffC33235),
+                              ),
+                              KeyboardType: TextInputType.text,
+                              controller: _AddressController,
+                              hintText: "Address",
+                              labelText: "Address"),
+                          SizedBox(
+                            height: 25.0,
                           ),
                           SizedBox(
                             width: scwidth * 0.88,
@@ -264,11 +208,11 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const update_profile()),
+                                          const Home_Screen()),
                                 );
                               },
                               child: Text(
-                                "Complete Profile",
+                                "Submit",
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.w700),
                               ),
@@ -285,7 +229,7 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                       ),
                     ),
                     SizedBox(
-                      height: 45.0,
+                      height: 20.0,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0),
@@ -317,10 +261,11 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                                     left: 8.0,
                                   ),
                                   child: SizedBox(
-                                    height: 88.0,
-                                    width: 88.0,
+                                    height: 88,
+                                    width: 88,
                                     child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(9.0),
+                                        borderRadius:
+                                            BorderRadius.circular(9.0),
                                         child: Image(
                                             image: AssetImage(
                                                 "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
@@ -332,6 +277,9 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                           ),
                         ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 20.0,
                     ),
                   ],
                 ),

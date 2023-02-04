@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:issar_foundation_blood_bank_app/view/Components/Customtextfield.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Home.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Login.dart';
 
+import 'Home.dart';
+import 'Login.dart';
 import 'Looking_for_Blood.dart';
 
 class Otp_Screen extends StatefulWidget {

@@ -4,10 +4,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:issar_foundation_blood_bank_app/view/Utils/Colors.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Home.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Login.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Looking_for_Blood.dart';
 import 'package:lottie/lottie.dart';
+
+import '../screens/Login.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

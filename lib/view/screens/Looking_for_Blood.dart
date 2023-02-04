@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:issar_foundation_blood_bank_app/view/Components/Customtextfield.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Complete_Profile.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Home.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Login.dart';
+
+import 'Complete_Profile.dart';
+import 'Home.dart';
+import 'Login.dart';
 
 class Looking_for_Blood extends StatefulWidget {
   const Looking_for_Blood({super.key});

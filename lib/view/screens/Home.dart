@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:issar_foundation_blood_bank_app/API/Down_Banner_Api.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Donate_Us.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Looking_for_Blood.dart';
+
+import 'Donate_Us.dart';
+import 'Looking_for_Blood.dart';
 
 class Home_Screen extends StatefulWidget {
   const Home_Screen({super.key});

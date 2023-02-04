@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:issar_foundation_blood_bank_app/view/Components/Customtextfield.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Home.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Looking_for_Blood.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Otp.dart';
+
+import 'Looking_for_Blood.dart';
+import 'Otp.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Home.dart';
-import 'package:issar_foundation_blood_bank_app/view/share/Looking_for_Blood.dart';
+
+import 'Home.dart';
+import 'Looking_for_Blood.dart';
 
 class Donate_Us extends StatefulWidget {
   const Donate_Us({super.key});
