@@ -248,99 +248,38 @@ class _update_profileState extends State<update_profile> {
                     ),
                     SizedBox(
                       height: 90.0,
-                      child: Expanded(
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: Down_Banner_pic.Pic_Banner.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.only(
-                                left: 8.0,
-                              ),
-                              child: SizedBox(
-                                height: 88,
-                                width: 88,
-                                child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(9.0),
-                                    child: Image(
-                                        image: AssetImage(
-                                            "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
-                                        fit: BoxFit.fill)),
-                              ),
-                            );
-                          },
-                        ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Down_Banner_pic.Pic_Banner.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 8.0,
+                                  ),
+                                  child: SizedBox(
+                                    height: 88,
+                                    width: 88,
+                                    child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(9.0),
+                                        child: Image(
+                                            image: AssetImage(
+                                                "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
+                                            fit: BoxFit.fill)),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    // Expanded(
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.only(
-                    //       left: 10.0,
-                    //       right: 15.0,
-                    //     ),
-                    //     child: ListView(
-                    //       scrollDirection: Axis.horizontal,
-                    //       children: [
-                    //         Row(
-                    //           children: [
-                    //             SizedBox(
-                    //               height: 90,
-                    //               width: 85,
-                    //               child: ClipRRect(
-                    //                   borderRadius: BorderRadius.circular(9.0),
-                    //                   child: Image(
-                    //                       image: AssetImage(
-                    //                           "Images/Rectangle 11.png"),
-                    //                       fit: BoxFit.fill)),
-                    //             ),
-                    //             SizedBox(
-                    //               width: 10,
-                    //             ),
-                    //             SizedBox(
-                    //               height: 90,
-                    //               width: 85,
-                    //               child: ClipRRect(
-                    //                   borderRadius: BorderRadius.circular(9.0),
-                    //                   child: Image(
-                    //                       image: AssetImage(
-                    //                           "Images/Rectangle 12.png"),
-                    //                       fit: BoxFit.fill)),
-                    //             ),
-                    //             SizedBox(
-                    //               width: 10,
-                    //             ),
-                    //             SizedBox(
-                    //               height: 90,
-                    //               width: 85,
-                    //               child: ClipRRect(
-                    //                   borderRadius: BorderRadius.circular(9.0),
-                    //                   child: Image(
-                    //                       image: AssetImage(
-                    //                           "Images/Rectangle 13.png"),
-                    //                       fit: BoxFit.fill)),
-                    //             ),
-                    //             SizedBox(
-                    //               width: 10,
-                    //             ),
-                    //             SizedBox(
-                    //               height: 90,
-                    //               width: 85,
-                    //               child: ClipRRect(
-                    //                   borderRadius: BorderRadius.circular(9.0),
-                    //                   child: Image(
-                    //                       image: AssetImage(
-                    //                           "Images/Rectangle 14.png"),
-                    //                       fit: BoxFit.fill)),
-                    //             ),
-                    //           ],
-                    //         ),
-                    //       ],
-                    //     ),
-                    //   ),
-                    // ),
                   ],
                 ),
               ),

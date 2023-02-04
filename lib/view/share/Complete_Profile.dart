@@ -305,28 +305,32 @@ class _Complte_ProfileState extends State<Complte_Profile> {
                     ),
                     SizedBox(
                       height: 90.0,
-                      child: Expanded(
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: Down_Banner_pic.Pic_Banner.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.only(
-                                left: 8.0,
-                              ),
-                              child: SizedBox(
-                                height: 88.0,
-                                width: 88.0,
-                                child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(9.0),
-                                    child: Image(
-                                        image: AssetImage(
-                                            "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
-                                        fit: BoxFit.fill)),
-                              ),
-                            );
-                          },
-                        ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Down_Banner_pic.Pic_Banner.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 8.0,
+                                  ),
+                                  child: SizedBox(
+                                    height: 88.0,
+                                    width: 88.0,
+                                    child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(9.0),
+                                        child: Image(
+                                            image: AssetImage(
+                                                "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
+                                            fit: BoxFit.fill)),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

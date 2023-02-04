@@ -9,6 +9,8 @@ import 'package:issar_foundation_blood_bank_app/view/share/Looking_for_Blood.dar
 import 'package:issar_foundation_blood_bank_app/view/share/Otp.dart';
 import 'package:issar_foundation_blood_bank_app/view/splashscreen/Splashscreen.dart';
 
+import 'view/share/Home_Edit_Profile.dart';
+
 void main() {
   runApp(const MyApp());
 }

@@ -160,28 +160,33 @@ class _Home_ScreenState extends State<Home_Screen> {
                     ),
                     SizedBox(
                       height: 90.0,
-                      child: Expanded(
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: Down_Banner_pic.Pic_Banner.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.only(
-                                left: 6.0,
-                              ),
-                              child: SizedBox(
-                                height: 88.0,
-                                width: 88.0,
-                                child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(9.0),
-                                    child: Image(
-                                        image: AssetImage(
-                                            "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
-                                        fit: BoxFit.fill)),
-                              ),
-                            );
-                          },
-                        ),
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Down_Banner_pic.Pic_Banner.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(
+                                    left: 6.0,
+                                  ),
+                                  child: SizedBox(
+                                    height: 88.0,
+                                    width: 88.0,
+                                    child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(9.0),
+                                        child: Image(
+                                            image: AssetImage(
+                                                "${Down_Banner_pic.Pic_Banner[index]["SlideShow"]}"),
+                                            fit: BoxFit.fill)),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
@@ -202,39 +207,44 @@ class _Home_ScreenState extends State<Home_Screen> {
                     ),
                     SizedBox(
                       height: 80.0,
-                      child: Expanded(
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: Sponsor_Banner.Sponsor_Banner_pic.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 18, right: 5.0),
-                              child: SizedBox(
-                                height: 88,
-                                width: 88,
-                                child: Container(
-                                  height: 88.0,
-                                  decoration: new BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(9)),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Color(0xffF5F5F5),
-                                        blurRadius: 3,
-                                        spreadRadius: 1,
-                                      )
-                                    ],
+                      child: Column(
+                        children: [
+                          Flexible(
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount:
+                                  Sponsor_Banner.Sponsor_Banner_pic.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 18, right: 5.0),
+                                  child: SizedBox(
+                                    height: 88,
+                                    width: 88,
+                                    child: Container(
+                                      height: 88.0,
+                                      decoration: new BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(9)),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Color(0xffF5F5F5),
+                                            blurRadius: 3,
+                                            spreadRadius: 1,
+                                          )
+                                        ],
+                                      ),
+                                      child: Image(
+                                          image: AssetImage(
+                                              "${Sponsor_Banner.Sponsor_Banner_pic[index]["SlideShow"]}")),
+                                    ),
                                   ),
-                                  child: Image(
-                                      image: AssetImage(
-                                          "${Sponsor_Banner.Sponsor_Banner_pic[index]["SlideShow"]}")),
-                                ),
-                              ),
-                            );
-                          },
-                        ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
